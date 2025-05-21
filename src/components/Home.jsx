@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiDownload } from 'react-icons/fi';
+import { FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
 
 const Home = () => {
   const [showToast, setShowToast] = useState(false);
@@ -10,6 +10,24 @@ const Home = () => {
     setShowToast(true);
     setTimeout(() => setShowToast(false), 3000);
   };
+
+  const socialLinks = [
+    {
+      icon: <FiGithub size={24} />,
+      href: 'https://github.com/shraddhasrf',
+      label: 'GitHub'
+    },
+    {
+      icon: <FiLinkedin size={24} />,
+      href: 'https://www.linkedin.com/in/shraddhasaraf/',
+      label: 'LinkedIn'
+    },
+    {
+      icon: <FiMail size={24} />,
+      href: 'mailto:shraddhasrf@gmail.com',
+      label: 'Email'
+    }
+  ];
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
@@ -55,8 +73,28 @@ const Home = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          className="flex mb-8 gap-6 justify-center"
+        >
+          {socialLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-secondary transform hover:scale-110 transition-all duration-300"
+              aria-label={link.label}
+            >
+              {link.icon}
+            </a>
+          ))}
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
-          className="flex flex-wrap gap-4"
+          className="flex flex-wrap gap-4 justify-center"
         >
           <Link
             to="projects"

@@ -4,19 +4,14 @@ import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 const Footer = () => {
   const socialLinks = [
     {
-      icon: <FiGithub size={20} />,
-      href: 'https://github.com/username',
-      label: 'GitHub'
-    },
-    {
       icon: <FiLinkedin size={20} />,
-      href: 'https://linkedin.com/in/username',
+      href: 'https://www.linkedin.com/in/shraddhasaraf/',
       label: 'LinkedIn'
     },
     {
-      icon: <FiTwitter size={20} />,
-      href: 'https://twitter.com/username',
-      label: 'Twitter'
+      icon: <FiGithub size={20} />,
+      href: 'https://github.com/shraddhasrf',
+      label: 'GitHub'
     }
   ];
 

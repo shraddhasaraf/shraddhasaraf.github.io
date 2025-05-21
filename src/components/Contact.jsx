@@ -27,19 +27,13 @@ const Contact = () => {
     {
       icon: <FiMail className="w-6 h-6" />,
       title: 'Email',
-      content: 'contact@rushabhthakkar.com',
-      href: 'mailto:contact@rushabhthakkar.com'
-    },
-    {
-      icon: <FiPhone className="w-6 h-6" />,
-      title: 'Phone',
-      content: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      content: 'shraddhasrf@gmail.com',
+      href: 'mailto:shraddhasrf@gmail.com'
     },
     {
       icon: <FiMapPin className="w-6 h-6" />,
       title: 'Location',
-      content: 'San Francisco, CA',
+      content: 'United States',
       href: '#'
     }
   ];

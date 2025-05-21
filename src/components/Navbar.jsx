@@ -6,7 +6,10 @@ import { Bars3Icon as MenuIcon, XMarkIcon as XIcon } from '@heroicons/react/24/o
 const navigation = [
   { name: 'Home', href: 'home' },
   { name: 'About', href: 'about' },
+  { name: 'Experience', href: 'experience' },
   { name: 'Projects', href: 'projects' },
+  { name: 'Skills', href: 'skills' },
+  { name: 'Education', href: 'education' },
   { name: 'Skills', href: 'skills' },
   { name: 'Contact', href: 'contact' },
 ];
@@ -29,7 +32,7 @@ const Navbar = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex-shrink-0">
-                <span className="text-2xl font-bold text-secondary">SS.</span>
+                <span className="text-2xl font-bold text-secondary">Shraddha Saraf</span>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-8">
