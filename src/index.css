@@ -1,3 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +15,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @apply bg-primary text-gray-100;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.nav-link {
+  @apply cursor-pointer hover:text-secondary transition-colors duration-300;
+}
+
+.section-title {
+  @apply text-4xl font-bold mb-8 relative inline-block;
+}
+
+.section-title::after {
+  content: "";
+  @apply absolute -bottom-2 left-0 w-2/3 h-1 bg-secondary;
 }
