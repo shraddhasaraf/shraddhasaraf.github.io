@@ -102,116 +102,102 @@ const Skills = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-20">
-      <div className="flex justify-between items-center mb-16">
-        <motion.h2
-          className="text-4xl font-bold text-gray-800 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-2/3 after:h-1 after:bg-secondary"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          Skills & Expertise
-        </motion.h2>
-        <ResumeButton />
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {skillCategories.map((category, categoryIndex) => (
-          <motion.div
-            key={categoryIndex}
+    <div className="min-h-screen bg-gradient-to-b from-white to-tertiary py-20">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex justify-between items-center mb-16">
+          <motion.h2
+            className="text-4xl font-bold text-gray-800 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-2/3 after:h-1 after:bg-secondary"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: categoryIndex * 0.2 }}
-            className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300"
+            transition={{ duration: 0.5 }}
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 bg-secondary/10 rounded-full text-secondary">
-                {category.icon}
+            Skills & Achievements
+          </motion.h2>
+          <ResumeButton />
+        </div>
+
+        {/* Achievements Section */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {achievements.map((achievement, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-3 bg-secondary/10 rounded-full text-secondary">
+                  {achievement.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">{achievement.title}</h3>
               </div>
-              <h3 className="text-xl font-bold text-gray-800">
-                {category.category}
-              </h3>
-            </div>
+              <ul className="space-y-2 ml-2">
+                {achievement.items.map((item, i) => (
+                  <motion.li
+                    key={i}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: (index * 0.1) + (i * 0.1) }}
+                    className="flex items-start gap-2 text-gray-600"
+                  >
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-secondary flex-shrink-0" />
+                    <span>{item}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
 
-            <div className="space-y-4">
-              {category.skills.map((skill, skillIndex) => (
-                <motion.div
-                  key={skillIndex}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: skillIndex * 0.1 }}
-                >
-                  <div className="flex justify-between mb-2">
-                    <span className="text-gray-600 font-medium">{skill.name}</span>
-                    <span className="text-secondary font-semibold">{skill.level}%</span>
-                  </div>
-                  <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                    <motion.div
-                      className="h-full bg-secondary"
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      viewport={{ once: true }}
-                      transition={{
-                        duration: 1,
-                        delay: skillIndex * 0.1,
-                        ease: "easeOut"
-                      }}
-                    />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        ))}
-      </div>
-
-      <motion.h2
-        className="text-4xl font-bold mt-20 mb-12 text-gray-800 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-2/3 after:h-1 after:bg-secondary"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        Achievements & Recognition
-      </motion.h2>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {achievements.map((category, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            whileHover={{ y: -8 }}
-            className="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition-all duration-300"
-          >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-secondary/10 rounded-full text-secondary">
-                {category.icon}
+        {/* Skills Section */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {skillCategories.map((category, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-secondary/10 rounded-full text-secondary">
+                  {category.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">{category.category}</h3>
               </div>
-              <h3 className="text-xl font-bold text-gray-800">{category.title}</h3>
-            </div>
-            <ul className="space-y-3">
-              {category.items.map((item, itemIndex) => (
-                <motion.li
-                  key={itemIndex}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: itemIndex * 0.1 }}
-                  className="text-gray-600 flex items-start gap-2"
-                >
-                  <span className="text-secondary mt-1">•</span>
-                  <span>{item}</span>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-        ))}
+              <div className="space-y-4">
+                {category.skills.map((skill, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, width: 0 }}
+                    whileInView={{ opacity: 1, width: "100%" }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: (index * 0.1) + (i * 0.1) }}
+                  >
+                    <div className="flex justify-between mb-1">
+                      <span className="text-gray-700 font-medium">{skill.name}</span>
+                      <span className="text-secondary font-medium">{skill.level}%</span>
+                    </div>
+                    <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, delay: (index * 0.1) + (i * 0.1) }}
+                        className="h-full bg-secondary rounded-full"
+                      />
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );

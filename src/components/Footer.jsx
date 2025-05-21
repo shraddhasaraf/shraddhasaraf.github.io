@@ -10,7 +10,7 @@ const Footer = () => {
     },
     {
       icon: <FiGithub size={20} />,
-      href: 'https://github.com/shraddhasrf',
+      href: 'https://github.com/shraddhasaraf',
       label: 'GitHub'
     }
   ];

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiBriefcase, FiCalendar } from 'react-icons/fi';
 import ResumeButton from './ResumeButton';
+import SectionHeader from './SectionHeader';
 
 const Experience = () => {
   const experiences = [
@@ -38,22 +39,19 @@ const Experience = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-tertiary py-20">
+    <div id="experience" className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-20">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between items-center mb-16">
-          <motion.h2
-            className="text-4xl font-bold text-gray-800 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-2/3 after:h-1 after:bg-secondary"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            Professional Experience
-          </motion.h2>
-          <ResumeButton />
+        <div className="flex justify-between items-center">
+          <SectionHeader 
+            title="Professional Experience" 
+            subtitle="My journey in technology and product development"
+          />
+          <div className="absolute right-4 top-4 md:static">
+            <ResumeButton />
+          </div>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-12 mt-16">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
@@ -61,25 +59,30 @@ const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-all duration-300"
+              className="group"
             >
-              <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-secondary/10 rounded-full mt-1">
-                    <FiBriefcase className="w-6 h-6 text-secondary" />
+              <div className="bg-white rounded-xl shadow-lg p-8 relative hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:border-secondary/20">
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-xl mt-1 group-hover:from-secondary/20 group-hover:to-secondary/10 transition-colors duration-300">
+                      <FiBriefcase className="w-6 h-6 text-secondary" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-800 group-hover:text-secondary transition-colors duration-300">
+                        {exp.title}
+                      </h3>
+                      <p className="text-secondary font-medium">{exp.company}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-800">{exp.title}</h3>
-                    <p className="text-secondary font-medium">{exp.company}</p>
+                  <div className="flex items-center gap-2 text-gray-500 mt-2 md:mt-0 bg-gray-50 px-4 py-2 rounded-full">
+                    <FiCalendar className="w-5 h-5" />
+                    <span>{exp.period}</span>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-gray-500 mt-2 md:mt-0">
-                  <FiCalendar className="w-5 h-5" />
-                  <span>{exp.period}</span>
+
+                <div className="ml-[3.25rem] md:ml-[4.25rem]">
+                  <p className="text-gray-600 leading-relaxed">{exp.description}</p>
                 </div>
-              </div>
-              <div className="ml-[3.25rem] md:ml-[4.25rem]">
-                <p className="text-gray-600 leading-relaxed">{exp.description}</p>
               </div>
             </motion.div>
           ))}

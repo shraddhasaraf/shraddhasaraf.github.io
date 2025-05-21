@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import FunFacts from './components/FunFacts';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
         </section>
         <section id="skills" className="min-h-screen py-20">
           <Skills />
+        </section>
+        <section id="fun-facts" className="min-h-screen py-20">
+          <FunFacts />
         </section>
         <section id="education" className="min-h-screen py-20">
           <Education />

@@ -55,40 +55,47 @@ const Education = () => {
           <ResumeButton />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        {/* Education Section */}
+        <div className="space-y-12">
           {education.map((edu, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-secondary/10 rounded-full">
-                  <FiBook className="w-6 h-6 text-secondary" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-800">{edu.degree}</h3>
-                  <p className="text-secondary font-medium">{edu.school}</p>
-                  <div className="flex items-center gap-2 text-gray-500 mt-1">
-                    <FiCalendar className="w-4 h-4" />
-                    <span>{edu.year}</span>
+              <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-secondary/10 rounded-full text-secondary mt-1">
+                    <FiBook className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-1">{edu.degree}</h3>
+                    <p className="text-secondary font-medium">{edu.school}</p>
                   </div>
                 </div>
+                <div className="flex items-center gap-2 text-gray-500 mt-4 md:mt-0 bg-gray-50 px-4 py-2 rounded-full">
+                  <FiCalendar className="w-5 h-5" />
+                  <span>{edu.year}</span>
+                </div>
               </div>
-
-              <div>
+              
+              <div className="ml-[3.25rem] md:ml-[4.25rem]">
                 <h4 className="text-lg font-semibold text-gray-700 mb-3">Key Courses</h4>
                 <div className="flex flex-wrap gap-2">
-                  {edu.courses.map((course, courseIndex) => (
-                    <span
-                      key={courseIndex}
-                      className="text-sm px-3 py-1 bg-tertiary rounded-full text-gray-600"
+                  {edu.courses.map((course, i) => (
+                    <motion.span
+                      key={i}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: (index * 0.1) + (i * 0.1) }}
+                      className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium hover:bg-secondary hover:text-white transition-colors duration-300"
                     >
                       {course}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
               </div>
@@ -96,27 +103,35 @@ const Education = () => {
           ))}
         </div>
 
+        {/* Certifications Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-16"
         >
-          <h3 className="text-2xl font-bold mb-6 text-gray-800">Certifications</h3>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <h3 className="text-2xl font-bold text-gray-800 mb-8">Professional Certifications</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 + (index * 0.1) }}
+                whileHover={{ y: -5 }}
+                className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
-                <h4 className="text-xl font-semibold text-gray-800 mb-2">{cert.name}</h4>
-                <p className="text-secondary">{cert.issuer}</p>
-                <div className="flex items-center gap-2 text-gray-500 mt-1">
-                  <FiCalendar className="w-4 h-4" />
-                  <span>{cert.year}</span>
+                <div className="flex items-center justify-between mb-4">
+                  <h4 className="font-semibold text-gray-800">{cert.name}</h4>
+                  <div className="text-sm text-gray-500 flex items-center gap-1">
+                    <FiCalendar className="w-4 h-4" />
+                    {cert.year}
+                  </div>
                 </div>
-              </div>
+                <p className="text-secondary">{cert.issuer}</p>
+              </motion.div>
             ))}
           </div>
         </motion.div>

@@ -11,7 +11,7 @@ const Projects = () => {
       impact: '$1.5M+ potential annual profit gains identified',
       tech: ['Python', 'Time Series Analysis', 'Machine Learning', 'API Development', 'Cloud Storage'],
       icon: <FiBarChart className="w-6 h-6" />,
-      github: 'https://github.com/shraddhasrf/energy-forecasting',
+      github: 'https://github.com/shraddhasaraf/energy-forecasting',
       demo: '#'
     },
     {
@@ -20,7 +20,7 @@ const Projects = () => {
       impact: '30% increase in premium user conversion',
       tech: ['Revenue Optimization', 'A/B Testing', 'SQL', 'Data Analytics', 'Product Strategy'],
       icon: <FiUsers className="w-6 h-6" />,
-      github: 'https://github.com/shraddhasrf/revenue-optimization',
+      github: 'https://github.com/shraddhasaraf/revenue-optimization',
       demo: '#'
     },
     {
@@ -29,7 +29,7 @@ const Projects = () => {
       impact: '182 successful candidate placements',
       tech: ['Full Stack Development', 'Recruitment Analytics', 'UI/UX', 'Database Design'],
       icon: <FiAward className="w-6 h-6" />,
-      github: 'https://github.com/shraddhasrf/bluepandajobs',
+      github: 'https://github.com/shraddhasaraf/bluepandajobs',
       demo: '#'
     },
     {
@@ -38,7 +38,7 @@ const Projects = () => {
       impact: 'AU $295M growth & 163k new customers',
       tech: ['Data Analytics', 'ETL', 'Dashboard Development', 'Customer Insights'],
       icon: <FiBarChart className="w-6 h-6" />,
-      github: 'https://github.com/shraddhasrf/customer-analytics',
+      github: 'https://github.com/shraddhasaraf/customer-analytics',
       demo: '#'
     },
     {
@@ -47,7 +47,7 @@ const Projects = () => {
       impact: '90% reduction in manual testing effort',
       tech: ['Test Automation', 'Risk Management', 'Compliance', 'Enterprise Software'],
       icon: <FiAward className="w-6 h-6" />,
-      github: 'https://github.com/shraddhasrf/compliance-suite',
+      github: 'https://github.com/shraddhasaraf/compliance-suite',
       demo: '#'
     },
     {
@@ -56,7 +56,7 @@ const Projects = () => {
       impact: '80% improvement in analytics efficiency',
       tech: ['Healthcare Analytics', 'Data Security', 'System Integration', 'Python'],
       icon: <FiUsers className="w-6 h-6" />,
-      github: 'https://github.com/shraddhasrf/healthcare-integration',
+      github: 'https://github.com/shraddhasaraf/healthcare-integration',
       demo: '#'
     }
   ];
@@ -85,14 +85,16 @@ const Projects = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ y: -8 }}
-            className="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition-all duration-300"
+            className="bg-gradient-to-br from-white to-gray-50/50 rounded-lg shadow-lg p-6 hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-secondary/20"
           >
             <div className="flex justify-between items-start mb-4">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-secondary/10 rounded-full text-secondary">
+                <div className="p-2 bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-full text-secondary group-hover:from-secondary/20 group-hover:to-secondary/10">
                   {project.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-800">{project.title}</h3>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+                  {project.title}
+                </h3>
               </div>
               <div className="flex gap-3">
                 <a
@@ -116,7 +118,7 @@ const Projects = () => {
 
             <p className="text-gray-600 mb-4">{project.description}</p>
             
-            <div className="bg-secondary/5 rounded-lg p-3 mb-4">
+            <div className="bg-gradient-to-r from-secondary/5 to-secondary/10 rounded-lg p-3 mb-4">
               <p className="text-secondary font-semibold">{project.impact}</p>
             </div>
 
@@ -124,7 +126,7 @@ const Projects = () => {
               {project.tech.map((tech, techIndex) => (
                 <span
                   key={techIndex}
-                  className="text-sm px-3 py-1 bg-tertiary rounded-full text-gray-600 hover:bg-secondary/10 transition-colors"
+                  className="text-sm px-3 py-1 bg-tertiary rounded-full text-gray-600 hover:bg-secondary/10 hover:text-secondary transition-all duration-300"
                 >
                   {tech}
                 </span>
