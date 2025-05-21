@@ -39,7 +39,7 @@ const Footer = () => {
             ))}
           </div>
           <p className="text-lightText text-sm">
-            © {new Date().getFullYear()} Rushabh Thakkar. All rights reserved.
+            © {new Date().getFullYear()} Shraddha Saraf. All rights reserved.
           </p>
         </div>
       </div>

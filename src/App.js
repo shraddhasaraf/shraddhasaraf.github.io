@@ -9,9 +9,9 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-primary min-h-screen">
+    <div className="min-h-screen bg-primary text-gray-800">
       <Navbar />
-      <main>
+      <main className="bg-gradient-to-b from-primary to-tertiary">
         <section id="home" className="min-h-screen">
           <Home />
         </section>

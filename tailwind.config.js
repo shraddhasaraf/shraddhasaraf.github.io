@@ -6,15 +6,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#0a192f",
-        secondary: "#64ffda",
-        tertiary: "#112240",
-        lightText: "#8892b0",
-      },
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        'primary': '#ffffff',
+        'secondary': '#3b82f6',
+        'tertiary': '#f3f4f6',
+        'lightText': '#4b5563',
       },
     },
   },
   plugins: [],
+  corePlugins: {
+    preflight: true,
+  },
 }
