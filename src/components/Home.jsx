@@ -112,7 +112,10 @@ const Home = () => {
               <img
                 src={process.env.PUBLIC_URL + '/profile-photo.jpg'}
                 alt="Shraddha Saraf"
-                className="w-full h-full object-cover rounded-full relative z-10 border-4 border-white shadow-xl transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-full object-cover rounded-full relative z-10 border-4 border-white shadow-xl transition-transform duration-300 group-hover:scale-105 select-none"
+                onContextMenu={(e) => e.preventDefault()}
+                onDragStart={(e) => e.preventDefault()}
+                loading="lazy"
               />
             </div>
           </motion.div>

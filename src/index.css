@@ -8,6 +8,16 @@
   }
   body {
     @apply bg-primary text-gray-100;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Allow text selection for specific elements */
+  p, h1, h2, h3, h4, h5, h6, span, a {
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
   }
 }
 
