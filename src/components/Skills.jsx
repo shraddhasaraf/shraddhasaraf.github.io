@@ -102,9 +102,9 @@ const Skills = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-tertiary py-20">
+    <div className="min-h-screen bg-gradient-to-b from-white to-tertiary py-12">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between items-center mb-16">
+        <div className="flex justify-between items-center mb-10">
           <motion.h2
             className="text-4xl font-bold text-gray-800 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-2/3 after:h-1 after:bg-secondary"
             initial={{ opacity: 0, y: 20 }}
@@ -118,7 +118,7 @@ const Skills = () => {
         </div>
 
         {/* Achievements Section */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
           {achievements.map((achievement, index) => (
             <motion.div
               key={index}

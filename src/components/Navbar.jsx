@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon as MenuIcon, XMarkIcon as XIcon } from '@heroicons/react/24/outline';
+import logo from '../assets/data-logo.svg';
 
 const navigation = [
   { name: 'Home', href: 'home' },
@@ -65,8 +66,13 @@ const Navbar = () => {
                   to="home"
                   smooth={true}
                   duration={500}
-                  className="cursor-pointer"
+                  className="cursor-pointer flex items-center gap-3 group"
                 >
+                  <img 
+                    src={logo} 
+                    alt="SS Logo" 
+                    className="w-8 h-8 transform transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" 
+                  />
                   <span className="text-2xl font-bold bg-gradient-to-r from-secondary to-blue-600 bg-clip-text text-transparent">
                     Shraddha Saraf
                   </span>

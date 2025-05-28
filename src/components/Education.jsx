@@ -34,15 +34,16 @@ const Education = () => {
   const certifications = [
     {
       name: 'Introduction to Python',
-      issuer: 'Coursera',
-      year: '2024'
+      issuer: 'Analytics Vidhya',
+      year: '2024',
+      link: 'https://courses.analyticsvidhya.com/certificates/njknspnkes'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-tertiary py-20">
+    <div className="bg-gradient-to-b from-white to-tertiary py-8">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between items-center mb-16">
+        <div className="flex justify-between items-center mb-8">
           <motion.h2
             className="text-4xl font-bold text-gray-800 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-2/3 after:h-1 after:bg-secondary"
             initial={{ opacity: 0, y: 20 }}
@@ -56,7 +57,7 @@ const Education = () => {
         </div>
 
         {/* Education Section */}
-        <div className="space-y-12">
+        <div className="space-y-8">
           {education.map((edu, index) => (
             <motion.div
               key={index}
@@ -109,9 +110,9 @@ const Education = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-16"
+          className="mt-6"
         >
-          <h3 className="text-2xl font-bold text-gray-800 mb-8">Professional Certifications</h3>
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">Professional Certifications</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
               <motion.div
@@ -124,7 +125,17 @@ const Education = () => {
                 className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <h4 className="font-semibold text-gray-800">{cert.name}</h4>
+                  <h4 className="font-semibold text-gray-800">
+                    <a 
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-secondary transition-colors duration-300 flex items-center gap-2"
+                    >
+                      {cert.name}
+                      <FiBook className="w-4 h-4" />
+                    </a>
+                  </h4>
                   <div className="text-sm text-gray-500 flex items-center gap-1">
                     <FiCalendar className="w-4 h-4" />
                     {cert.year}

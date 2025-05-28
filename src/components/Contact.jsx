@@ -89,8 +89,8 @@ const Contact = () => {
   `;
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-20">
-      <div className="flex flex-col items-center text-center mb-16">
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="flex flex-col items-center text-center mb-10">
         <motion.h2
           className="text-4xl font-bold mb-4 text-gray-800 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-2/3 after:h-1 after:bg-secondary"
           initial={{ opacity: 0, y: 20 }}
@@ -111,7 +111,7 @@ const Contact = () => {
         </motion.p>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-8 mb-8">
+      <div className="grid lg:grid-cols-3 gap-6 mb-6">
         {contactInfo.map((info, index) => (
           <motion.a
             key={index}

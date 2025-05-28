@@ -28,8 +28,8 @@ const About = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-20">
-      <div className="flex justify-between items-center mb-8">
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="flex justify-between items-center mb-6">
         <motion.h2 
           className="text-4xl font-bold text-gray-800 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-2/3 after:h-1 after:bg-secondary"
           initial={{ opacity: 0, y: 20 }}
@@ -42,7 +42,7 @@ const About = () => {
         <ResumeButton />
       </div>
 
-      <div className="max-w-3xl mx-auto text-center mb-16">
+      <div className="max-w-3xl mx-auto text-center mb-12">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

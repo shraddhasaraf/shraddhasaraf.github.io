@@ -16,9 +16,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-tertiary py-8">
+    <footer className="bg-tertiary py-6">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex flex-col items-center justify-center space-y-4">
+        <div className="flex flex-col items-center justify-center space-y-3">
           <div className="flex space-x-6">
             {socialLinks.map((link, index) => (
               <a

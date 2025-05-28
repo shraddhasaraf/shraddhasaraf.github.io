@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <circle cx="24" cy="24" r="24" fill="url(#gradient)" />
+  
+  <!-- Overlapping SS letters -->
+  <path d="M18 32C15.5 32 13.5 31.5 12 30.5C10.5 29.5 9.75 28 9.75 26C9.75 24.5 10.25 23.25 11.25 22.25C12.25 21.25 13.75 20.5 15.75 20C17.75 19.5 20.25 19.25 23.25 19.25H26.25V18.75C26.25 17.75 25.75 17 24.75 16.5C23.75 16 22.5 15.75 21 15.75C19.5 15.75 18.25 16 17.25 16.5C16.25 17 15.5 17.75 15 18.75L10.5 16.25C11.5 14.75 13 13.5 15 12.5C17 11.5 19.25 11 21.75 11C25.75 11 28.75 11.75 30.75 13.25C32.75 14.75 33.75 17 33.75 20V32H26.25V29.25H25.75C25 30.25 24 31 22.75 31.5C21.5 32 19.5 32 18 32ZM19.5 27.75C21 27.75 22.25 27.25 23.25 26.25C24.25 25.25 24.75 24 24.75 22.5V22H22.75C20.75 22 19.25 22.25 18.25 22.75C17.25 23.25 16.75 24 16.75 25C16.75 25.5 17 26 17.5 26.5C18 27 18.5 27.75 19.5 27.75Z" fill="white"/>
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+</svg>

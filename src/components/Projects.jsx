@@ -11,7 +11,7 @@ const Projects = () => {
       impact: '$1.5M+ potential annual profit gains identified',
       tech: ['Python', 'Time Series Analysis', 'Machine Learning', 'API Development', 'Cloud Storage'],
       icon: <FiBarChart className="w-6 h-6" />,
-      github: 'https://github.com/shraddhasaraf/energy-forecasting',
+      github: 'https://github.com/shraddhasaraf/energy-price-predictions',
       demo: '#'
     },
     {
@@ -62,8 +62,8 @@ const Projects = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-20">
-      <div className="flex justify-between items-center mb-16">
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="flex justify-between items-center mb-10">
         <motion.h2
           className="text-4xl font-bold text-gray-800 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-2/3 after:h-1 after:bg-secondary"
           initial={{ opacity: 0, y: 20 }}

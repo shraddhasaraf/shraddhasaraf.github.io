@@ -51,7 +51,7 @@ const Experience = () => {
           </div>
         </div>
 
-        <div className="space-y-12 mt-16">
+        <div className="space-y-8 mt-12">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}

@@ -50,10 +50,10 @@ const FunFacts = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50 py-20">
+    <div className="bg-gradient-to-b from-white to-gray-50 py-12">
       <div className="max-w-6xl mx-auto px-4">
         <motion.h2
-          className="text-4xl font-bold text-gray-800 text-center mb-16 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-2/3 after:h-1 after:bg-secondary"
+          className="text-4xl font-bold text-gray-800 text-center mb-10 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-2/3 after:h-1 after:bg-secondary"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

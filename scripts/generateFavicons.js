@@ -3,7 +3,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 async function generateFavicons() {
-    const inputSvg = path.join(__dirname, '../src/assets/logo.svg');
+    const inputSvg = path.join(__dirname, '../src/assets/data-logo.svg');
     const publicDir = path.join(__dirname, '../public');
     
     // Read the SVG file
