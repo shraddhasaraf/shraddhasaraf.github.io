@@ -20,7 +20,7 @@ export default function Contact() {
           
           <div className="grid md:grid-cols-2 gap-8">
             <a 
-              href="https://calendar.google.com/calendar/u/0?cid=c2hyYWRkaGFzcmZAZ21haWwuY29t"
+              href="https://calendar.app.google/XVbSfATdFuKNbudP6"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative overflow-hidden rounded-xl bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-blue-200"
