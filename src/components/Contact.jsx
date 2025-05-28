@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 // Email is encoded to prevent scraping
-const ENCODED_EMAIL = 'YXl1c2hqandhbGE5NEBnbWFpbC5jb20='; // Base64 encoded email
+const ENCODED_EMAIL = 'c2hyYWRkaGFzcmZAZ21haWwuY29t'; // Base64 encoded email
 
 export default function Contact() {
   return (
