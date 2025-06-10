@@ -11,36 +11,38 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FunFacts from './components/FunFacts';
+import FloatingResumeButton from './components/FloatingResumeButton';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-primary text-gray-800">
+      <div className="min-h-screen bg-primary">
         <Analytics />
         <Navbar />
-        <main className="bg-gradient-to-b from-primary to-tertiary">
+        <FloatingResumeButton />
+        <main>
           <section id="home" className="min-h-screen">
             <Home />
           </section>
-          <section id="about" className="min-h-screen py-12">
+          <section id="about">
             <About />
           </section>
-          <section id="experience" className="min-h-screen py-12">
+          <section id="experience">
             <Experience />
           </section>
-          <section id="projects" className="min-h-screen py-12">
-            <Projects />
-          </section>
-          <section id="skills" className="min-h-screen py-12">
+          <section id="skills">
             <Skills />
           </section>
-          <section id="fun-facts" className="min-h-screen py-12">
+          <section id="projects">
+            <Projects />
+          </section>
+          <section id="fun-facts">
             <FunFacts />
           </section>
-          <section id="education" className="py-12">
+          <section id="education">
             <Education />
           </section>
-          <section id="contact" className="py-12">
+          <section id="contact">
             <Contact />
           </section>
         </main>

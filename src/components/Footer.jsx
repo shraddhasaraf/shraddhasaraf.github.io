@@ -6,7 +6,11 @@ const Footer = () => {
     {
       icon: <FiLinkedin size={20} />,
       href: 'https://www.linkedin.com/in/shraddhasaraf/',
-      label: 'LinkedIn'
+      label: 'LinkedIn',
+      onClick: (e) => {
+        e.preventDefault();
+        window.open('https://www.linkedin.com/in/shraddhasaraf/', '_blank', 'noopener,noreferrer');
+      }
     },
     {
       icon: <FiGithub size={20} />,
@@ -27,6 +31,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.label}
+                onClick={link.onClick}
                 className="text-lightText hover:text-secondary transition-colors"
               >
                 {link.icon}

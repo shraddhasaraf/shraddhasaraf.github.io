@@ -1,9 +1,10 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 
 // Email is encoded to prevent scraping
 const ENCODED_EMAIL = 'c2hyYWRkaGFzcmZAZ21haWwuY29t'; // Base64 encoded email
 
-export default function Contact() {
+const Contact = () => {
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-white to-gray-50/50"></div>
@@ -73,4 +74,6 @@ export default function Contact() {
       </div>
     </section>
   );
-}
+};
+
+export default Contact;

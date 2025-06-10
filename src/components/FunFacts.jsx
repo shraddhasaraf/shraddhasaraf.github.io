@@ -4,6 +4,7 @@ import {
   FiCoffee, FiMusic, FiGlobe, FiBookOpen, 
   FiHeart, FiStar, FiCamera, FiAward 
 } from 'react-icons/fi';
+import PageBackground from './shared/PageBackground';
 
 const FunFacts = () => {
   const facts = [
@@ -50,43 +51,45 @@ const FunFacts = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50 py-12">
-      <div className="max-w-6xl mx-auto px-4">
-        <motion.h2
-          className="text-4xl font-bold text-gray-800 text-center mb-10 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-2/3 after:h-1 after:bg-secondary"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          Fun Facts
-        </motion.h2>
+    <PageBackground>
+      <div className="py-12">
+        <div className="max-w-6xl mx-auto px-4">
+          <motion.h2
+            className="text-4xl font-bold text-gray-800 text-center mb-10 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-2/3 after:h-1 after:bg-secondary"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            Fun Facts
+          </motion.h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {facts.map((fact, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center group"
-            >
-              <div className="inline-block p-4 bg-secondary/10 rounded-full text-secondary mb-4 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
-                {fact.icon}
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-secondary transition-colors duration-300">
-                {fact.title}
-              </h3>
-              <p className="text-gray-600">
-                {fact.description}
-              </p>
-            </motion.div>
-          ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {facts.map((fact, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center group"
+              >
+                <div className="inline-block p-4 bg-secondary/10 rounded-full text-secondary mb-4 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
+                  {fact.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-secondary transition-colors duration-300">
+                  {fact.title}
+                </h3>
+                <p className="text-gray-600">
+                  {fact.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </PageBackground>
   );
 };
 

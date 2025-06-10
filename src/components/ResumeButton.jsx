@@ -14,14 +14,14 @@ const ResumeButton = ({ className = '' }) => {
     <>
       <a
         href="/ShraddhaSaraf_resume.pdf"
-        className={`px-4 py-2 bg-secondary text-white rounded-full hover:bg-secondary/80 hover:scale-105 transition-all flex items-center gap-2 shadow-md text-sm ${className}`}
+        className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-secondary rounded-md shadow-sm hover:bg-secondary/90 transition-all ${className}`}
         download="ShraddhaSaraf_Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
         onClick={handleDownload}
       >
-        <FiDownload className="animate-bounce" />
-        Resume
+        <FiDownload className="w-4 h-4" />
+        Download Resume
       </a>
 
       <AnimatePresence>
@@ -30,9 +30,9 @@ const ResumeButton = ({ className = '' }) => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
-            className="fixed bottom-8 right-8 bg-secondary text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 z-50"
+            className="fixed bottom-8 right-8 bg-secondary text-white px-4 py-2 rounded-md shadow-md flex items-center gap-2 z-50 text-sm"
           >
-            <FiDownload />
+            <FiDownload className="w-4 h-4" />
             Resume download started!
           </motion.div>
         )}

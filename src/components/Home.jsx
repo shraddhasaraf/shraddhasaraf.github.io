@@ -13,7 +13,11 @@ const Home = () => {
     {
       icon: <FiLinkedin size={24} />,
       href: 'https://www.linkedin.com/in/shraddhasaraf/',
-      label: 'LinkedIn'
+      label: 'LinkedIn',
+      onClick: (e) => {
+        e.preventDefault();
+        window.open('https://www.linkedin.com/in/shraddhasaraf/', '_blank', 'noopener,noreferrer');
+      }
     },
     {
       icon: <FiMail size={24} />,
@@ -64,6 +68,7 @@ const Home = () => {
                     rel="noopener noreferrer"
                     className="text-gray-600 hover:text-secondary transform hover:scale-110 transition-all duration-300"
                     aria-label={link.label}
+                    onClick={link.onClick}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                   >
