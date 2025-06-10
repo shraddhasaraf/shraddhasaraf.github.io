@@ -19,7 +19,6 @@ function App() {
       <div className="min-h-screen bg-primary">
         <Analytics />
         <Navbar />
-        <FloatingResumeButton />
         <main>
           <section id="home" className="min-h-screen">
             <Home />
@@ -47,6 +46,7 @@ function App() {
           </section>
         </main>
         <Footer />
+        <FloatingResumeButton />
       </div>
     </Router>
   );
