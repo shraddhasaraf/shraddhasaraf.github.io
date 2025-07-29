@@ -55,7 +55,7 @@ const Skills = () => {
     {
       category: 'Technical Skills',
       icon: <FiCode className="w-6 h-6" />,
-      skills: ['Python', 'SQL', 'FastAPI', 'Metadata Modeling', 'ETL Pipelines', 'Machine Learning', AI/ML Integration']
+      skills: ['Python', 'SQL', 'FastAPI', 'Metadata Modeling', 'ETL Pipelines', 'Machine Learning', 'AI/ML Integration']
     },
     {
       category: 'Data & Analytics',
