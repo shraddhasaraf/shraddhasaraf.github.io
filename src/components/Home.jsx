@@ -85,15 +85,6 @@ const Home = () => {
                 className="flex flex-wrap gap-4 justify-center md:justify-start"
               >
                 <Link
-                  to="projects"
-                  smooth={true}
-                  duration={500}
-                  className="px-8 py-3 bg-gradient-to-r from-secondary to-secondaryLight text-white rounded-full hover:from-secondaryLight hover:to-secondary transition-all cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                >
-                  View Projects
-                </Link>
-                
-                <Link
                   to="contact"
                   smooth={true}
                   duration={500}
