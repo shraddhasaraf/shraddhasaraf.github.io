@@ -23,59 +23,59 @@ const Skills = () => {
       items: [
         "Awarded 4 Spot Awards and 1 Applause Award at Deloitte for exceptional performance",
         "Recognized as Star Performer for outstanding contribution at AstraZeneca",
-        "Led ING Australia project resulting in AU $295M growth and 163,000 new customers"
+        "Led product initiatives that generated AU $295M growth and acquired 163,000 new customers"
       ]
     },
     {
       icon: <FiAward className="w-6 h-6" />,
-      title: "Project Excellence",
+      title: "Product Impact",
       items: [
-        "Top performer award for MES project (2019-20)",
-        "Top performer award for EPH project (2018-19)",
-        "Top performer award for ING project (2017-18)"
+        "Boosted profits by over $1.5M through AI-powered energy price forecasting dashboard",
+        "Increased customer engagement by 30% through AI-driven roadmap creation feature",
+        "Reduced time-to-launch by 20% through streamlined agile workflows"
       ]
     },
     {
       icon: <FiStar className="w-6 h-6" />,
       title: "Technical Achievements",
       items: [
-        "Improved analytics efficiency by 80% through automated dashboards",
-        "Reduced manual testing effort by 90% through automation frameworks",
-        "Enhanced product delivery time by 25% through optimizations"
+        "Automated 4-day manual process down to 5 minutes for 1M+ rows of data",
+        "Cut manual testing by 90% and boosted release velocity by 25%",
+        "Reduced ramp-up time by 40% through improved onboarding systems"
       ]
     }
   ];
 
   const skillCategories = [
     {
-      category: 'Data & Analytics',
-      icon: <FiDatabase className="w-6 h-6" />,
-      skills: ['Data Analysis', 'SQL & Database Design', 'ETL Pipeline Development', 'Statistical Analysis', 'Data Visualization']
-    },
-    {
       category: 'Product Management',
       icon: <FiTrendingUp className="w-6 h-6" />,
-      skills: ['Product Strategy', 'A/B Testing', 'Revenue Optimization', 'User Research', 'Product Analytics', 'Growth Metrics']
+      skills: ['Product Strategy', 'Roadmapping', 'A/B Testing', 'Workflow Automation', 'Data-Driven Decision Making', 'Stakeholder Communication']
     },
     {
       category: 'Technical Skills',
       icon: <FiCode className="w-6 h-6" />,
-      skills: ['Python', 'Machine Learning', 'Time Series Analysis', 'API Development', 'Cloud Services']
+      skills: ['Python', 'SQL', 'FastAPI', 'Metadata Modeling', 'ETL Pipelines', 'Machine Learning', AI/ML Integration']
+    },
+    {
+      category: 'Data & Analytics',
+      icon: <FiDatabase className="w-6 h-6" />,
+      skills: ['Tableau', 'Power BI', 'Streamlit', 'Statistical Analysis', 'Data Visualization', 'Real-time Dashboards']
     },
     {
       category: 'Tools & Platforms',
       icon: <FiTool className="w-6 h-6" />,
-      skills: ['Tableau', 'JIRA', 'Git', 'Figma', 'Azure/AWS']
+      skills: ['Figma', 'Jira', 'GitHub', 'S3', 'Creative Asset Pipelines', 'Agile Framework']
     },
     {
-      category: 'Leadership',
+      category: 'Leadership & Collaboration',
       icon: <FiUsers className="w-6 h-6" />,
-      skills: ['Team Management', 'Stakeholder Communication', 'Cross-functional Collaboration', 'Project Planning', 'Strategic Thinking']
+      skills: ['Team Management', 'Cross-functional Alignment', 'GTM Strategy', 'User Research', 'Onboarding Systems']
     },
     {
-      category: 'Domain Knowledge',
+      category: 'Interests & Focus Areas',
       icon: <FiGlobe className="w-6 h-6" />,
-      skills: ['AI/ML Strategy', 'FinTech', 'Healthcare Analytics', 'Energy Markets', 'Enterprise Software']
+      skills: ['Product-Led Growth', 'AI and Machine Learning', 'Generative AI', 'Monetization', 'Healthcare Tech', 'FinTech']
     }
   ];
 

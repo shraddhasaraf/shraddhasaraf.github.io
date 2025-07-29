@@ -11,6 +11,7 @@ const Education = () => {
       degree: 'Master of Science in Business Analytics',
       school: 'W. P. Carey School of Business at Arizona State University',
       year: '2025',
+      gpa: '4.0/4.0',
       courses: [
         'Data Analytics',
         'Machine Learning',
@@ -23,6 +24,7 @@ const Education = () => {
       degree: 'Bachelor of Technology in Software Engineering',
       school: 'SRM University',
       year: '2015',
+      gpa: '8.2/10.0',
       courses: [
         'Computer Science',
         'Software Engineering',
@@ -73,6 +75,7 @@ const Education = () => {
                     <div>
                       <h3 className="text-2xl font-bold text-gray-800 mb-1">{edu.degree}</h3>
                       <p className="text-secondary font-medium">{edu.school}</p>
+                      {edu.gpa && <p className="text-gray-600 text-sm mt-1">GPA: {edu.gpa}</p>}
                     </div>
                   </div>
                   <div className="flex items-center gap-2 text-gray-500 mt-4 md:mt-0 bg-gray-50 px-4 py-2 rounded-full">

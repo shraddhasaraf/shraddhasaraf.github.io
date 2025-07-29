@@ -8,34 +8,40 @@ import PageBackground from './shared/PageBackground';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Technical Lead',
-      company: 'New Grid Consulting',
+      title: 'Design Product Manager',
+      company: 'Hack for LA - Expunge Assist',
+      period: 'Jun 2025 - Present',
+      description: 'Defined MVP roadmap and streamlined creative workflows using GitHub and Figma, ran weekly syncs, and built onboarding systems, boosting design velocity, improving cross-functional alignment, and reducing ramp-up time by 40%.'
+    },
+    {
+      title: 'Product Consultant',
+      company: 'New Grid Consulting - ERCOT',
       period: 'Dec 2024 - May 2025',
-      description: 'Spearheaded AI-powered time series forecasting solution for ERCOTs day-ahead market. Led product design and deployment across API, cloud storage, and UI. Drove business analytics uncovering $1.5M+ in potential annual profit gains.'
+      description: 'Defined and communicated product vision, strategy, and roadmap for an AI powered dashboard that forecasts real-time energy prices, enabling battery owners to bid smarter and boosting profits by over $1.5M across hubs. Collaborated with engineering and data teams to design data ingestion API workflows, automating a 4-day manual process down to 5 minutes for 1M+ rows of data.'
     },
     {
-      title: 'Product Manager',
-      company: 'SeeMe',
-      period: 'Oct 2024 - Dec 2024',
-      description: 'Designed pricing strategies for AI-powered features, increasing revenue by 15%. Led monetization experiments improving premium conversion by 30%. Developed A/B tests and SQL-based revenue dashboards.'
+      title: 'Product Management Intern',
+      company: 'SeeMe - Mental Health & Habit Tracking App',
+      period: 'Aug 2024 - Dec 2024',
+      description: 'Led development of an AI-driven roadmap creation feature based on user-defined goals, boosting customer satisfaction and increasing engagement by 30%. Conducted usability and A/B testing, monitored KPIs on real-time dashboard, and streamlined product workflows using agile framework, reducing time-to-launch by 20%.'
     },
     {
-      title: 'Founder & CEO',
+      title: 'Founder & Product Strategist',
       company: 'BluePandaJobs',
       period: 'Jul 2021 - Aug 2023',
-      description: 'Built a B2B hiring platform streamlining recruitment for enterprise clients. Successfully placed 182 candidates, enhancing client satisfaction through data-driven improvements.'
+      description: 'Founded and built BluePandaJobs, designing the full recruitment workflow and platform to match 180+ candidates with employers across the blue-collar job market. Implemented GTM strategy, user research, and feedback loops, growing job postings by 30% quarterly and placements by 20%, while managing a 4-member team.'
     },
     {
-      title: 'SDET',
-      company: 'Mitratech',
+      title: 'Software Development Engineer',
+      company: 'Mitratech - CMO (Compliance Manager)',
       period: 'Mar 2020 - Jun 2021',
-      description: 'Managed compliance software for clients including BlackRock and Shell. Enhanced product quality, improved delivery time by 25%, and reduced manual testing by 90%.'
+      description: 'Drove automation strategy, cutting manual testing by 90% and boosting release velocity by 25% through cross-team collaboration. Aligned quality benchmarks and sprint goals with developers and PMs, improving defect triaging and resolution speed.'
     },
     {
       title: 'Consultant',
-      company: 'Deloitte USI Consulting',
+      company: 'Deloitte - Strategy & Analytics',
       period: 'Jan 2016 - Feb 2020',
-      description: 'Delivered technical consulting for Healthcare, Banking, and Governance sectors. Developed ETL pipelines & automated dashboards, improving efficiency by 80%. Solutions helped ING Australia gain AU $295M and 163,000 new customers.'
+      description: 'Defined workflow and analytics for a secure banking platform, driving AU $295M in revenue and acquiring 163K new customers. Partnered with product and client stakeholders in healthcare and financial industry (J&J, Medicaid Enterprise Systems, Eli Lilly, and ING) to define success metrics and build ETL pipelines and dashboards.'
     }
   ];
 

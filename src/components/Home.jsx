@@ -54,8 +54,8 @@ const Home = () => {
               </h3>
               
               <p className="text-gray-600 text-lg max-w-xl mb-8 leading-relaxed">
-                A data-driven product professional with expertise in AI strategy and analytics.
-                Passionate about leveraging data to drive business growth and create impactful solutions.
+                Product Manager with 5+ years of experience building data-driven products across finance, healthcare, AI and tech. 
+                Passionate about turning complex problems into clear, actionable solutions that drive measurable results.
               </p>
 
               {/* Social Links */}

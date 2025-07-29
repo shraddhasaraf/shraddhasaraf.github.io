@@ -49,9 +49,7 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl text-gray-600 leading-relaxed"
             >
-              👋 Hi! I'm a Data-driven Product Professional with a passion for building innovative solutions
-              that drive business growth. With 6+ years of experience, I specialize in AI strategy,
-              revenue optimization, and creating exceptional user experiences through data-driven decision making.
+              👋 Hi! I'm a Product Manager with 5+ years of experience building data-driven products across finance, healthcare, and tech for both B2B and B2C users. I specialize in turning complex problems into clear, actionable solutions, whether that means launching new products from the ground up or optimizing internal tools. I lead cross-functional teams with a strong focus on user needs and data, delivering simple, impactful solutions that improve efficiency and drive measurable results.
             </motion.p>
           </div>
 
